@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yaalii grid</title>
+    <style>
+      .grd {
+        display: grid;
+        grid-template-columns: 200px 200px;
+        margin-top: 20px;
+      }
+      .grid1 {
+        background-color: lightsalmon;
+      }
+      .gr2 {
+        background-color: lightblue;
+      }
+      .grd3 {
+        display: grid;
+        grid-template-columns: 200px 200px;
+        margin-top: 20px;
+      }
+
+      .grd4 {
+        display: grid;
+        grid-template-columns: 100px 1fr 1fr;
+        margin-top: 20px;
+      }
+      .gr32 {
+        background-color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grd">
+      <div class="grid1">yaalii grid</div>
+      <div class="gr2">
+        my gread2
+        <p>qube</p>
+      </div>
+    </div>
+    <div class="grd3">
+      <div class="grid1">yaalii grid</div>
+      <div class="gr2">
+        my gread2
+        <p>qube</p>
+        <div class="grid32">yaalii grid</div>
+      </div>
+    </div>
+    <div class="grd4">
+      <div class="grid1">100px</div>
+      <div class="gr2">
+        my gread2
+        <p>qube</p>
+        <div class="grid32">fr</div>
+        <div class="grid1">1frs</div>
+      </div>
+    </div>
+  </body>
+</html>

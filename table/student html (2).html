@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>table 1</title>
+  </head>
+  <body>
+    <table
+      name="form"
+      border="3"
+      cellspacing="0"
+      width="300"
+      align="center"
+      height="60"
+    >
+      <tr height="30">
+        <th colspan="18">MAQAA MANABARUMSAA <br />Daree</th>
+      </tr>
+
+      <tr>
+        <th rowspan="2">T/L</th>
+        <th rowspan="2">Maqaa Guutuu</th>
+        <th rowspan="2">Umri</th>
+        <th rowspan="2">Saala</th>
+        <th rowspan="2">Simst.</th>
+        <th style="background-color: blueviolet" colspan="4">GOSA BARNOOTAA</th>
+        <th rowspan="2" name="tot">Id'ama</th>
+        <th rowspan="2" name="avg">Avereg</th>
+        <th rowspan="2" name="reslt">Sad.</th>
+        <th rowspan="2" name="grd">Amal</th>
+        <th rowspan="2">Yaada</th>
+      </tr>
+
+      <tr>
+        <th>Afan.O</th>
+        <th>ENGL</th>
+        <th>Ama</th>
+        <th>Her</th>
+      </tr>
+
+      <tr name="form1">
+        <td rowspan="3"></td>
+        <td rowspan="3"></td>
+        <td rowspan="3"></td>
+        <td rowspan="3"></td>
+        <td><input type="text" id="b1" /></td>
+        <td><input style="border: none" type="text" name="b2" /></td>
+        <td><input style="border: none" type="text" name="b3" /></td>
+        <td><input style="border: none" type="text" name="b4" /></td>
+
+        <td><input style="border: inherit" type="text" name="b5" /></td>
+
+        <td>
+          <input style="border: inherit" type="text" name="total" />
+        </td>
+        <td>
+          <input style="border: inherit" type="text" name="average" />
+        </td>
+        <td><input type="text" name="result" /></td>
+        <td><input style="border: inherit" type="text" name="grade" /></td>
+      </tr>
+
+      <tr>
+        <td><input style="border: inherit" type="text" /></td>
+        <td><input style="border: inherit" type="text" /></td>
+        <td><input style="border: inherit" type="text" /></td>
+        <td><input style="border: inherit" type="text" /></td>
+        <td><input style="border: inherit" type="text" /></td>
+        <td><input style="border: inherit" type="text" /></td>
+        <td><input style="border: inherit" type="text" /></td>
+        <td><input style="border: inherit" type="text" /></td>
+      </tr>
+      <tr>
+        <td><input style="border: inherit" type="text" /></td>
+        <td><input style="border: inherit" type="text" /></td>
+        <td><input style="border: inherit" type="text" /></td>
+        <td><input style="border: inherit" type="text" /></td>
+        <td><input style="border: inherit" type="text" /></td>
+        <td><input style="border: inherit" type="text" /></td>
+        <td><input style="border: inherit" type="text" /></td>
+        <td><input style="border: inherit" type="text" /></td>
+      </tr>
+      <div style="bottom: 50px">
+        <button type="button" onclick="calc();">calculate</button>
+      </div>
+    </table>
+
+    <script>
+      function calc() {
+        var m1,
+          m2,
+          m3,
+          m4,
+          avg,
+          total,
+          result = "",
+          grade = "";
+
+        m1 = parseInt(document.form.b2.value);
+        m2 = parseInt(document.form.b3.value);
+        m3 = parseInt(document.form.b4.value);
+        m4 = parseInt(document.form.b5.value);
+        total = m1 + m2 + m3 + m4;
+        avg = Math.round(total / 4);
+        if (avg < 50) {
+          result = "kufteetta";
+        } else if (avg >= 50) {
+          result = "darbiteetta";
+        } else if (avg >= 75) {
+          result = "bayee gaaridha";
+          grade = "A";
+        }
+
+        document.form.total.value = total;
+        document.form.average.value = avg;
+        document.form.result.value = result;
+        document.form.grade.value = grade;
+      }
+
+      /*function calculate() {
+                    a = parseInt(form1.textNum1.value);
+                    b = parseInt(form1.textNum2.value);
+                    c = parseInt(form1.textNum3.value);
+                    result = a + b + c;
+                    Avereg = result / 5;
+                    document.write("the total is :" + "<br>" + result + "<br>" + "</br>");
+                    document.write("the total is :" + "<br>" + Avereg + "<br>" + "</br>");
+                    if (Avereg > 50) {
+                      document.write("the Grade is :" + "<br>" + "Darpitetta" + "<br>");
+                    } else {
+                      document.write("the Grade is :" + "<br>" + "kuftetaa" + "<br>");
+                    }
+                  }
+            */
+      //document.querySelector(.)
+      //export default
+    </script>
+  </body>
+</html>
